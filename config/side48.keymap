@@ -101,10 +101,11 @@
         default_layer {
             bindings = <
 &kp UP     &kp RIGHT  &kp LEFT  &kp DOWN  &kp GRAVE        &kp GRAVE           &mkp MB1    &mkp MB2     &kp MB3                                             //左から未使用、未使用、未使用、未使用、未使用、未使用、上側マウスボタン、下側マウスボタン、未使用
-&kp TAB    &kp Q      &kp W     &kp E     &kp R            &kp T               &kp Y       &kp U        &kp I         &kp O     &kp P          &kp DELETE
-&kp LCTRL  &kp A      &kp S     &kp D     &kp F            &kp G               &kp H       &kp J        &kp K         &kp L     &kp SEMICOLON  &kp MINUS
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V            &kp B               &kp N       &kp M        &kp COMMA     &kp DOT   &kp UP         &kp SLASH
-&kp ESC    &kp LCTRL  &kp LWIN  &kp LALT  &mt LSHFT SPACE  &lt 1 JP_HANZEN     &lt 2 BSPC  &lt 3 ENTER  &kp JP_QUOTE  &kp LEFT  &kp DOWN       &kp RIGHT 
+
+&kp ESCAPE      &lt 5 Q    &lt 6 E    &lt 7 U       &kp P            &kp T               &kp Y      &kp D        &lt 7 T       &lt 6 R     &lt 5 W     &mkp MB1
+&mt LSHIFT TAB  &lt 3 O    &lt 2 A    &lt 1 I       &mt LCTRL F        &kp LC(Y)              &kp PRINTSCREEN      &mt RCTRL H  &lt 1 Y       &lt 2 K     &lt 3 S     &mt LEFT_SHIFT B
+&lt 4 MINUS     &mt LGUI X &mt LALT C &mt LSHIFT V  &mt LCTRL L  &kp LC(RG(LEFT))             &kp LG(RC(RIGHT))             &mt RCTRL N  &mt RSHIFT M  &mt RALT G  &mt RGUI J  &lt 4 Z
+&kp ESC    &kp LCTRL  &kp LWIN  &kp LALT  &mt LSHFT SPACE        &kp LC(RG(LEFT))             &kp LG(RC(RIGHT))    &lt 3 ENTER  &kp JP_QUOTE  &kp LEFT  &kp DOWN       &kp RIGHT 
             >;
             sensor-bindings = <&scroll_left_right &scroll_up_down>;
         };
