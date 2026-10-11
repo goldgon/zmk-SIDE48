@@ -113,9 +113,10 @@
         layer_1 {
             bindings = <
 &trans  &trans        &trans        &trans           &trans           &trans          &trans        &trans         &trans    
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_4     &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8   &kp NUMBER_9  &kp NUMBER_0   &trans
-&trans  &trans        &trans        &kp JP_LBRACKET  &kp JP_RBRACKET  &trans          &trans        &kp NUMBER_4   &kp NUMBER_5   &kp NUMBER_6  &kp JP_COLON   &kp JP_UNDERSCORE
-&trans  &trans        &trans        &kp JP_LPAREN    &kp JP_RPAREN    &trans          &trans        &kp NUMBER_1   &kp NUMBER_2   &kp NUMBER_3  &kp PIPE       &trans
+
+ &kp 0x38      &none      &kp UP     &none      &none          &none      &none                     &kp TAB        &kp UP     &kp JP_SQT  &kp JP_DQT  &mkp MB2
+&kp JP_SEMI   &kp LEFT   &kp GRAVE  &kp GRAVE  &kp MINUS  &none      &none  &kp BACKSPACE  &kp SPACE  &kp TAB     &kp ENTER   &kp COMMA
+ &kp JP_COLON  &none      &none      &none      &none      &none         &trans    &kp DELETE     &none      &none       &none       &mt LCTRL PERIOD
 &trans  &trans        &trans        &trans           &trans           &trans          &trans        &kp NUMBER_0   &kp JP_DQUOTE  &trans        &trans         &trans
             >;
             sensor-bindings = <&scroll_left_right &scroll_up_down>;
@@ -124,9 +125,10 @@
         layer_2 {
             bindings = <
 &trans  &trans           &trans     &trans     &trans      &trans          &trans        &trans             &trans    
-&trans  &kp EXCLAMATION  &kp JP_AT  &kp POUND  &kp DOLLAR  &kp PERCENT     &kp JP_CARET  &kp JP_AMPERSAND   &kp JP_ASTERISK   &kp MINUS    &kp UNDERSCORE   &trans
-&trans  &kp GRAVE        &kp TILDE  &trans     &trans      &kp C_VOL_UP    &kp C_VOL_DN  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp JP_PLUS  &kp JP_ASTERISK  &trans
-&trans  &trans           &trans     &trans     &trans      &trans          &mkp MB4      &mkp MB5           &trans            &trans       &trans           &trans
+
+    &none        &kp JP_LT      &kp JP_EQUAL   &kp JP_RT    &kp JP_PRCNT        &none      &none                          &kp JP_DLLR   &kp JP_PLUS  &kp JP_CARET      &kp JP_SLASH  &mkp MB3
+            &kp JP_LBKT  &kp JP_LPAR    &kp JP_AT      &kp JP_RPAR  &kp JP_RBKT      &none                   &none       &kp JP_QMARK  &kp JP_HASH  &kp DOUBLE_QUOTES &kp LS(0x87)  &kp LS(0x1e)
+            &kp JP_TILDE &kp JP_LBRC    &kp JP_AMPS    &kp JP_RBRC  &none            &none                 &none         &kp JP_YEN    &none        &kp JP_SQT        &kp JP_PIPE   &none
 &trans  &trans           &trans     &trans     &trans      &trans          &trans        &trans             &trans            &trans       &trans           &trans
             >;
             sensor-bindings = <&scroll_left_right &scroll_up_down>;
@@ -135,9 +137,11 @@
         layer_3 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans    &trans    
-&mo 4   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5     &kp F6  &kp F7    &kp F8    &kp F9     &kp F10  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &kp LEFT  &kp UP    &kp RIGHT  &trans   &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans    &kp DOWN  &trans     &trans   &trans
+
+    &none        &kp HOME   &kp UP     &kp PAGE_UP      &none               &none  &none                     &kp TAB          &kp N7          &kp N8        &kp N9         &mkp MB3
+                &none        &kp LEFT   &kp DOWN   &kp RIGHT        &none  &none                   &none       &kp BACKSPACE  &kp N4          &mt RGUI N5        &kp N6         &kp ENTER
+                &none        &kp END    &none      &kp PAGE_DOWN    &none      &kp TAB             &none           &kp N0         &kp N1          &kp N2        &kp N3         &mt LCTRL PERIOD
+
 &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans    &trans    &trans     &trans   &trans
             >;
             sensor-bindings = <&scroll_left_right &scroll_up_down>;
@@ -146,12 +150,67 @@
         layer_4 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans    
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans    &trans       &tog 6        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans  &trans  &trans  &trans  &trans    &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR_ALL
+
+               &kp F1   &kp F2    &kp F3  &kp F4  &kp F5          &none     &none                    &kp F6  &kp F7  &kp F8  &kp F9       &kp F10
+               &kp F11  &kp F12   &none   &none   &none     &none                  &none      &none   &none   &none   &kp JP_HASH  &none
+               &none    &none     &none   &none   &none     &none                  &none      &none   &none   &none   &none        &none
+
+
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
             >;
             sensor-bindings = <&scroll_left_right &scroll_up_down>;
         };
+
+
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans    
+
+             &none   &msc SCRL_RIGHT    &mmv MOVE_Y(-1500)  &msc SCRL_UP       &none       &none  &none               &none   &none  &none  &none  &mkp MB1
+                &none   &mmv MOVE_X(-1500) &mmv MOVE_Y(1500)   &mmv MOVE_X(1500)  &none  &none          &none        &none   &none  &none  &none  &none
+                &trans  &msc SCRL_LEFT     &trans              &msc SCRL_DOWN     &trans &none          &none        &none   &none  &none  &none  &none
+
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
+            >;
+            sensor-bindings = <&scroll_left_right &scroll_up_down>;
+        };
+
+
+
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans    
+
+           &none  &msc SCRL_RIGHT   &mmv MOVE_Y(-900) &msc SCRL_UP      &none     &none  &none              &none  &none     &none    &none     &mkp MB1
+                &none  &mmv MOVE_X(-900) &mmv MOVE_Y(900)  &mmv MOVE_X(900)  &none  &none          &none       &none  &kp LC(D) &kp TAB  &kp ENTER &none 
+                &trans &msc SCRL_LEFT    &trans            &msc SCRL_DOWN    &trans &none          &none       &none  &none     &none    &none     &none
+
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
+            >;
+            sensor-bindings = <&scroll_left_right &scroll_up_down>;
+        };
+
+
+
+        layer_7 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans    
+
+    &none  &msc SCRL_RIGHT   &mmv MOVE_Y(-200) &msc SCRL_UP      &none     &none  &none         &none  &none  &none  &none  &mkp MB1
+                &none  &mmv MOVE_X(-200) &mmv MOVE_Y(200)  &mmv MOVE_X(200)  &none  &none         &none             &none  &none  &none  &none  &none
+                &trans &msc SCRL_LEFT    &trans            &msc SCRL_DOWN    &trans &none         &none             &none  &none  &none  &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
+            >;
+            sensor-bindings = <&scroll_left_right &scroll_up_down>;
+        };
+
+
+
+
+
+
+
     };
 };
