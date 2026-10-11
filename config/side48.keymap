@@ -65,6 +65,17 @@
 
 
 
+
+// 0 1 2 3 4 5 6 7 8
+
+// 9 10 11 12 13 14       15 16 17 18 19 20
+
+//21 22 23 24 25 26       26 27 28 29 30 31
+
+//32 33 34 35 36 37       38 39 40 41 42 43
+
+//44 45 46 47 48 49       50 51 52 53 54 55
+
 / {
 
 
@@ -77,6 +88,88 @@
             layers = <0>;
             timeout-ms = <200>;
         };
+
+ fopen {
+            bindings = <&kp LG(N2)>;
+            key-positions = <5 9>;
+            layers = <0>;
+            timeout-ms = <200>;
+        };
+
+       bootloader_R {
+            bindings = <&bootloader>;
+            key-positions = <5 9 40 42>;
+            timeout-ms = <200>;
+        };
+
+       bootloader_L {
+            bindings = <&bootloader>;
+            key-positions = <0 4 34 39>;
+            timeout-ms = <200>;
+        };
+
+        eq {
+            bindings = <&bt BT_CLR_ALL>;
+            key-positions = <0 10 22>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        bt0 {
+            bindings = <&bt BT_SEL 0>;
+            key-positions = <5 17 29>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        bt1 {
+            bindings = <&bt BT_SEL 1>;
+            key-positions = <6 18 30>;
+            layers = <0>;
+        };
+
+        bt2 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <7 19 31>;
+            layers = <0>;
+        };
+
+        mute {
+            bindings = <&kp C_MUTE>;
+            key-positions = <13 14>;
+            layers = <0>;
+        };
+
+        vup {
+            bindings = <&kp C_VOL_UP>;
+            key-positions = <3 4>;
+            layers = <0>;
+        };
+
+        vdn {
+            bindings = <&kp C_VOL_DN>;
+            key-positions = <25 26>;
+            layers = <0>;
+        };
+
+        printscreen {
+            bindings = <&kp PSCRN>;
+            key-positions = <23 25>;
+            layers = <0>;
+        };
+
+
+        space {
+            bindings = <&kp SPACE>;
+            key-positions = <10 13>;
+            layers = <0>;
+        };
+
+
+
+
+
+
        };
 
 
