@@ -66,6 +66,24 @@
 
 
 / {
+
+
+    combos {
+        compatible = "zmk,combos";
+
+      lang {
+            bindings = <&kp GRAVE>;
+            key-positions = <1 3>;
+            layers = <0>;
+            timeout-ms = <200>;
+        };
+       };
+
+
+
+
+
+
     behaviors {
         lt_mkp: lt_mkp {
             compatible = "zmk,behavior-hold-tap";
