@@ -34,9 +34,9 @@
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 40
 #define MOUSE 0
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 100
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 40
 
 &msc {
     acceleration-exponent = <0>;      // 0
@@ -215,7 +215,7 @@
             bindings = <
 &kp UP     &kp RIGHT  &kp LEFT  &kp DOWN  &kp GRAVE        &kp GRAVE           &mkp MB1    &mkp MB2     &kp MB3                                             //左から未使用、未使用、未使用、未使用、未使用、未使用、上側マウスボタン、下側マウスボタン、未使用
 
-&kp ESCAPE      &lt 5 Q    &lt 6 E    &lt 7 U       &kp P            &kp T               &kp Y      &kp D        &lt 7 T       &lt 6 R     &lt 5 W     &mkp MB1
+&kp ESCAPE      &lt 5 Q    &lt 6 E    &lt 7 U       &lt 8 P            &kp T               &kp Y      &lt 8 D        &lt 7 T       &lt 6 R     &lt 5 W     &mkp MB1
 &mt LSHIFT TAB  &lt 3 O    &lt 2 A    &lt 1 I       &mt LCTRL F        &kp LC(Y)              &kp PRINTSCREEN      &mt RCTRL H  &lt 1 Y       &lt 2 K     &lt 3 S     &mt LEFT_SHIFT B
 &lt 4 MINUS     &mt LGUI X &mt LALT C &mt LSHIFT V  &mt LCTRL L  &kp LC(RG(LEFT))             &kp LG(RC(RIGHT))             &mt RCTRL N  &mt RSHIFT M  &mt RALT G  &mt RGUI J  &lt 4 Z
 &kp ESC    &kp LCTRL  &kp LWIN  &kp LALT  &mt LSHFT SPACE        &kp LC(RG(LEFT))             &kp LG(RC(RIGHT))    &lt 3 ENTER  &kp JP_QUOTE  &kp LEFT  &kp DOWN       &kp RIGHT 
@@ -280,8 +280,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans    
 
-             &none   &msc SCRL_RIGHT    &mmv MOVE_Y(-1500)  &msc SCRL_UP       &none       &none  &none               &none   &none  &none  &none  &mkp MB1
-                &none   &mmv MOVE_X(-1500) &mmv MOVE_Y(1500)   &mmv MOVE_X(1500)  &none  &none          &none        &none   &none  &none  &none  &none
+             &none   &msc SCRL_RIGHT    &mmv MOVE_Y(-2000)  &msc SCRL_UP       &none       &none  &none               &none   &none  &none  &none  &mkp MB1
+                &none   &mmv MOVE_X(-2000) &mmv MOVE_Y(2000)   &mmv MOVE_X(2000)  &none  &none          &none        &none   &none  &none  &none  &none
                 &trans  &msc SCRL_LEFT     &trans              &msc SCRL_DOWN     &trans &none          &none        &none   &none  &none  &none  &none
 
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
@@ -296,8 +296,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans    
 
-           &none  &msc SCRL_RIGHT   &mmv MOVE_Y(-900) &msc SCRL_UP      &none     &none  &none              &none  &none     &none    &none     &mkp MB1
-                &none  &mmv MOVE_X(-900) &mmv MOVE_Y(900)  &mmv MOVE_X(900)  &none  &none          &none       &none  &kp LC(D) &kp TAB  &kp ENTER &none 
+           &none  &msc SCRL_RIGHT   &mmv MOVE_Y(-1000) &msc SCRL_UP      &none     &none  &none              &none  &none     &none    &none     &mkp MB1
+                &none  &mmv MOVE_X(-1000) &mmv MOVE_Y(1000)  &mmv MOVE_X(1000)  &none  &none          &none       &none  &kp LC(D) &kp TAB  &kp ENTER &none 
                 &trans &msc SCRL_LEFT    &trans            &msc SCRL_DOWN    &trans &none          &none       &none  &none     &none    &none     &none
 
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
@@ -311,8 +311,8 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans    
 
-    &none  &msc SCRL_RIGHT   &mmv MOVE_Y(-200) &msc SCRL_UP      &none     &none  &none         &none  &none  &none  &none  &mkp MB1
-                &none  &mmv MOVE_X(-200) &mmv MOVE_Y(200)  &mmv MOVE_X(200)  &none  &none         &none             &none  &none  &none  &none  &none
+    &none  &msc SCRL_RIGHT   &mmv MOVE_Y(-300) &msc SCRL_UP      &none     &none  &none         &none  &none  &none  &none  &mkp MB1
+                &none  &mmv MOVE_X(-300) &mmv MOVE_Y(300)  &mmv MOVE_X(300)  &none  &none         &none             &none  &none  &none  &none  &none
                 &trans &msc SCRL_LEFT    &trans            &msc SCRL_DOWN    &trans &none         &none             &none  &none  &none  &none  &none
 &trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
             >;
@@ -320,7 +320,17 @@
         };
 
 
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans    
 
+    &none  &msc SCRL_RIGHT   &mmv MOVE_Y(-100) &msc SCRL_UP      &none     &none  &none         &none  &none  &none  &none  &mkp MB1
+                &none  &mmv MOVE_X(-100) &mmv MOVE_Y(100)  &mmv MOVE_X(100)  &none  &none         &none             &none  &none  &none  &none  &none
+                &trans &msc SCRL_LEFT    &trans            &msc SCRL_DOWN    &trans &none         &none             &none  &none  &none  &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &trans       &trans        &trans        &trans        &trans        &trans
+            >;
+            sensor-bindings = <&scroll_left_right &scroll_up_down>;
+        };
 
 
 
